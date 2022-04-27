@@ -1,0 +1,35 @@
+.header-title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    padding: 10px;
+
+}
+
+.pick-hour-container{
+   
+    border: 1px solid red;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    button {
+        border: 1px solid;
+        border-radius: 5px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .active{
+        background-color: orange;
+    }
+ }
+
+ .btn-save {
+    margin-top: 20px;
+    padding: inherit;
+ }

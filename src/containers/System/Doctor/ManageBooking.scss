@@ -1,0 +1,35 @@
+.manage-booking-container{
+    .m-p-title{
+        font-size: 15px;;
+        margin: 10px auto;
+        text-align: center;
+        text-transform:uppercase;
+    }
+    .manage-booking-body{
+        padding: 0 20px;
+
+        .table-manage{
+            margin-top: 10px;
+            table, th, td {
+                border:1px solid black;
+                border-collapse: collapse;
+              }
+            th,td {
+                padding: 5px;
+                text-align: left;
+            }
+
+            .confirmed{
+                background-color: yellow;
+                padding: 0px 10px !important;
+                color: black;
+            }
+            .confirm{
+               
+                padding: 0px 10px !important;
+
+            }
+
+        }
+    }
+}

@@ -1,0 +1,141 @@
+.home-header-container {
+  width: 100%;
+  height: 60px;
+  padding: 0 20px;
+  background: rgb(168, 156, 156);
+  position: fixed;
+  z-index: 10000;
+
+  .home-header-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+    .left-content {
+      width: 25%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      .header-logo {
+        // background: url("../../assets/images/bookingcare-2020.svg") center
+        //   center no-repeat;
+        // height: 100%;
+        // width: 50%;
+        font-size: 30px;
+        cursor: pointer;
+      }
+      i {
+        font-size: 25px;
+        color: green;
+        cursor: pointer;
+      }
+    }
+    .center-content {
+      width: 50%;
+
+      display: flex;
+      justify-content:center;
+      gap: 30px;
+      align-items: center;
+      .child-content {
+        .sub-title {
+          font-weight: 400;
+          font-size: 17px;
+          cursor: pointer;
+        }
+      }
+    }
+    .right-content {
+      width: 25%;
+      display: flex;
+      align-items: center;
+      justify-content:right;
+      cursor: pointer;
+      padding-right: 50px;
+
+      .language-vi {
+        margin-right: 10px;
+        &.active {
+          color: green;
+        }
+      }
+      .language-en {
+        &.active {
+          color: green;
+        }
+      }
+    }
+  }
+}
+
+.home-header-banner {
+  background-image: url("../../assets/images/Banner.jpg");
+  height: 600px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .banner-up {
+    height: 70%;
+    .title-1 {
+      text-align: center;
+      color: #bed296;
+      font-size: 50px;
+      text-shadow: 10px 10px 10px #333;
+      margin-bottom: 10px;
+      padding-top: 90px;
+    }
+    .title-2 {
+      text-align: center;
+      color: #bed296;
+      font-size: 50px;
+      text-shadow: 10px 10px 10px #333;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    
+  }
+  // .banner-down {
+  //   height: 30%;
+  //   background-image: linear-gradient(
+  //     rgba(255, 255, 255, 0),
+  //     rgba(255, 255, 255, 0.9),
+  //     rgba(255, 255, 255, 1)
+  //   );
+  //   padding-bottom: 10px;
+
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: flex-end;
+
+  //   .opptions {
+  //     display: flex;
+  //     justify-content: center;
+  //     gap: 50px;
+  //     .opption-child {
+  //       width: 100px;
+  //       text-align: center;
+  //       .icon-child {
+  //         width: 60px;
+  //         height: 60px;
+  //         border-radius: 50%;
+  //         font-size: 30px;
+  //         background: white;
+  //         color: green;
+  //         margin: 0 auto;
+  //         padding: 6px;
+  //       }
+  //       .text-child {
+  //         font-size: 16px;
+  //         font-weight: 600;
+  //         cursor: pointer;
+
+  //         &:hover {
+  //           color: green;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+}

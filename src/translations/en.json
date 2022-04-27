@@ -1,0 +1,76 @@
+{
+    "homeheader" : {
+        "About-us": "About us",
+        "HLV": "Fitness trainer",
+        "Blog": "Blog",
+        "Fitness-Center": "Fitness-Center",
+        "Traner-highligt": "OutStanding Coach of the Week",
+        "see-more": "More",
+        "speciality" : "Medical specialty",
+        "searchdoctor": "Find a doctor by specialty",
+        "health-facility": "Health facilities",
+        "select-room" : "Choose hospital clinic",
+        "doctor": "Doctor",
+        "choose-doctor": "Choose a good doctor",
+        "packet": "Examination package",
+        "general-health-check" : "General health check",
+        "medical-background": "FOUNDATION MEDICAL",
+        "health-care" : "Having health is having everything",
+        "find-expert" : "Find an expert",
+        "specialized-examination": "Specialized examination",
+        "remote-examination": "Remote examination",
+        "general-examination" : "General examination",
+        "medical-test" : "Medical test",
+        "mental-health": "Mental health",
+        "dental-examination": "Dental examination",
+        "surgery-pack": "Surgery pack",
+        "medical-products": "Medical products",
+        "support": "Support",
+        "welcome": "Welcome"
+
+    },
+
+    "menu": {
+        "system": {
+            "header": "System",
+            "system-administrator": {
+                "header": "System Administrator",
+                "user-manage": "User manage",
+                "user-redux": "Manage user with redux",
+                "register-package-group-or-account": "Register service package for group/account"
+            },
+            "system-parameter": {
+                "header": "System-parameter"
+            }
+        },
+        "admin": {
+            "manage-user": "Users Sytem",
+            "manage-doctor":"Manage doctor",
+            "manage-admin": "Manage Admin",
+            "crud": "CRUD user",
+            "crud-redux":"CRUD redux",
+            "clinic":"Clinic",
+            "manage-clinic": "Manage clinic",
+            "speciality": "Speciality",
+            "manage-speciality": "Manage speciality",
+            "handbook": "Handbook",
+            "manage-handbook": "Manage-handbook"
+        }
+    },
+    "manage-user":{
+        "add": "Add new user",
+        "email": "Email",
+        "password": "Password",
+        "first-name": "First Name",
+        "last-name": "Last Name",
+        "address": "Address",
+        "phone-number": "Phone Number",
+        "image": "Image",
+        "gender": "Gender",
+        "position": "Position",
+        "role": "Role",
+        "save": "Save User",
+        "edit": "Save changes"
+    }
+
+}
