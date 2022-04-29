@@ -46,26 +46,8 @@ class DetailDoctor extends Component {
       <>
         <HomeHeader isShowPaner={false} />
         <div className="doctor-detail-container">
-          <ProfileCoach coachId={2} />
-          {/* <div className="intro-doctor">
-            <div
-              className="content-left"
-              style={{
-                backgroundImage: `url(${detailDoctor.image})`,
-              }}
-            ></div>
+          {coachId && coachId !== "" && <ProfileCoach coachId={coachId} />}
 
-            <div className="content-right">
-              <div className="up">
-                {detailDoctor.lastname} {detailDoctor.firstname}
-              </div>
-              <div className="down">
-                {detailDoctor.Markdown && detailDoctor.Markdown.description && (
-                  <span>{detailDoctor.Markdown.description}</span>
-                )}
-              </div>
-            </div>
-          </div> */}
           <div className="schedule-doctor">
             <CoachSchdule doctorId={detailDoctor.id} />
           </div>
