@@ -39,6 +39,8 @@
       gap: 30px;
       align-items: center;
       .child-content {
+        display: flex;
+        gap: 15px;
         .sub-title {
           font-weight: 400;
           font-size: 17px;

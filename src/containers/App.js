@@ -15,8 +15,8 @@ import Home from "../routes/Home";
 import Login from "./Auth/Login";
 import System from "../routes/System";
 import Doctor from "../routes/Doctor";
-import DetailDoctor from "./Patient/Doctor/DetailDoctor";
-import ViewAllCoach from "./Patient/Doctor/ViewAllCoach";
+import DetailDoctor from "./Patient/Coach/DetailDoctor";
+import ViewAllCoach from "./Patient/Coach/ViewAllCoach";
 import { CustomToastCloseButton } from "../components/CustomToast";
 
 class App extends Component {

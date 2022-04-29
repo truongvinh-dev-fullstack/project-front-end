@@ -39,25 +39,16 @@
           padding-top: 10px;
         }
         .bg-img {
-          &.img-speciality {
-            background-image: url("../../assets/images/121146-tai-mui-hong.jpg");
-          }
-          &.img-medical {
-            background-image: url("../../assets/images/114348-bv-viet-duc.jpg");
-          }
+       
           &.img-doctor {
-            // background-image: url("../../assets/images/105401-bsckii-tran-minh-khuyen.jpg");
+    
             height: 120px;
             width: 120px;
             border-radius: 50%;
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
-          }
-          &.img-rosemary {
-            background-image: url("../../assets/images/camlang1.jpg");
-            margin: 0 20px !important;
-          }
+          }      
           margin: 0 auto;
           height: 150px;
           width: 278px;
@@ -106,6 +97,20 @@
       }
     }
   }
+}
+
+.introduction {
+   padding: 10px;
+   .intro{
+     font-size: 30px;
+     font-weight: 600;
+     
+   }
+   .intro-content{
+     padding: 10px;
+     text-align: center;
+     font-size: 17px;
+   }
 }
 
 .home-footer {

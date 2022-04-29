@@ -8,7 +8,8 @@ import MdEditor from "react-markdown-editor-lite";
 // import style manually
 import "react-markdown-editor-lite/lib/index.css";
 import "./ManageDoctor.scss";
-import { getDetailDoctor } from "../../../services/userService";
+import { getDetailCoach } from "../../../services/userService";
+import { toast } from "react-toastify";
 
 import Select from "react-select";
 import _ from "lodash";
@@ -26,28 +27,29 @@ class ManageDoctor extends Component {
     this.state = {
       contentMarkdown: "",
       contentHTML: "",
-      selectedDoctor: "",
+      selectedCoach: "",
       description: "",
       price: "",
-      allDoctors: [],
+      allCoachs: [],
       status: false,
     };
   }
 
   async componentDidMount() {
-    this.props.fetchAllDoctorsRedux();
+    this.props.fetchAllCoachsRedux();
   }
 
   componentDidUpdate(prevProps, prevState, snapshot) {
-    if (prevProps.allDoctors !== this.props.allDoctors) {
-      let arrDoctors = this.builtListDoctors(this.props.allDoctors);
+    if (prevProps.allCoachs !== this.props.allCoachs) {
+      console.log("check allcoachs : ", this.props.allCoachs);
+      let arrCoachs = this.builtListCoachs(this.props.allCoachs);
       this.setState({
-        allDoctors: arrDoctors,
+        allCoachs: arrCoachs,
       });
     }
   }
 
-  builtListDoctors = (inputData) => {
+  builtListCoachs = (inputData) => {
     let result = [];
     if (inputData && inputData.length > 0) {
       inputData.map((item, index) => {
@@ -60,11 +62,11 @@ class ManageDoctor extends Component {
     return result;
   };
 
-  handleChange = async (selectedDoctor) => {
+  handleChange = async (selectedCoach) => {
     this.setState({
-      selectedDoctor: selectedDoctor,
+      selectedCoach: selectedCoach,
     });
-    let res = await getDetailDoctor(selectedDoctor.value);
+    let res = await getDetailCoach(selectedCoach.value);
     if (
       res &&
       res.errCode === 0 &&
@@ -80,6 +82,7 @@ class ManageDoctor extends Component {
         status: true,
       });
     } else {
+      toast.success("Save done!");
       this.setState({
         description: "",
         contentMarkdown: "",
@@ -100,11 +103,11 @@ class ManageDoctor extends Component {
     let check = this.checkValidateInput();
     if (check) {
       console.log("check:", this.state);
-      this.props.saveDetailDoctor({
+      this.props.saveDetailCoach({
         contentHTML: this.state.contentHTML,
         contentMarkdown: this.state.contentMarkdown,
         description: this.state.description,
-        coachId: this.state.selectedDoctor.value,
+        coachId: this.state.selectedCoach.value,
         price: this.state.price,
       });
     }
@@ -131,32 +134,33 @@ class ManageDoctor extends Component {
   };
 
   render() {
-    const { selectedDoctor, allDoctors } = this.state;
-    console.log("state: ", this.state);
+    const { selectedCoach, allCoachs } = this.state;
+    console.log("state: ", this.props);
     return (
       <div className="manage-doctor-container">
-        <div className="manage-doctor-title">Tạo thêm thông tin HLV</div>
+        <div className="manage-doctor-title">Create more information Coach</div>
         <div className="more-info">
           <div className="content-left form-group">
-            <label>Chọn huấn luyện viên</label>
+            <label>Choose coach</label>
             <Select
-              value={selectedDoctor}
+              value={selectedCoach}
               onChange={this.handleChange}
-              options={allDoctors}
+              options={allCoachs}
             />
           </div>
-          <div className="content-left form-group">
+          <div className="content-center form-group">
             <label>Price</label>
             <input
               type="number"
               value={this.state.price}
+              className="form-control"
               onChange={(e) => {
                 this.handleOnChangeInput(e, "price");
               }}
             />
           </div>
           <div className="content-right form-group">
-            <label>THông tin giới thiệu: </label>
+            <label>Description: </label>
             <textarea
               className="form-control"
               onChange={(e) => this.handleOnChangeInput(e, "description")}
@@ -166,6 +170,12 @@ class ManageDoctor extends Component {
             </textarea>
           </div>
         </div>
+        <button
+          className="btn-save"
+          onClick={() => this.handleSaveContentMarkdown()}
+        >
+          {this.state.status === false ? "Save" : "Update"}
+        </button>
         <div className="manage-doctor-editor">
           <MdEditor
             value={this.state.contentMarkdown}
@@ -174,12 +184,6 @@ class ManageDoctor extends Component {
             onChange={this.handleEditorChange}
           />
         </div>
-        <button
-          className="btn-save"
-          onClick={() => this.handleSaveContentMarkdown()}
-        >
-          {this.state.status === false ? "Lưu thông tin" : "Update"}
-        </button>
       </div>
     );
   }
@@ -187,14 +191,14 @@ class ManageDoctor extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    allDoctors: state.admin.allDoctors,
+    allCoachs: state.admin.allDoctors,
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchAllDoctorsRedux: () => dispatch(actions.fetchAllDoctorsStart()),
-    saveDetailDoctor: (data) => dispatch(actions.saveDetailDoctorActions(data)),
+    fetchAllCoachsRedux: () => dispatch(actions.fetchAllDoctorsStart()),
+    saveDetailCoach: (data) => dispatch(actions.saveDetailDoctorActions(data)),
   };
 };
 

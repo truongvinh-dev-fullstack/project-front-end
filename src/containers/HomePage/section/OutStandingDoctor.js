@@ -31,6 +31,10 @@ class OutStandingDoctor extends Component {
     console.log("Check view Doctor: ", doctor);
     this.props.history.push(`/detail-doctor/${doctor.id}`);
   };
+
+  handleViewAllCoach = () => {
+    this.props.history.push("/viewALlCoach");
+  };
   render() {
     let language = this.props.language;
     let settings = {
@@ -47,11 +51,9 @@ class OutStandingDoctor extends Component {
         <div className="section-share speciality-container">
           <div className="section-container">
             <div className="section-header">
-              <span className="title">
-                <FormattedMessage id="homeheader.Traner-highligt" />
-              </span>
-              <span className="btn">
-                <FormattedMessage id="homeheader.see-more" />
+              <span className="title">OUTSTANDING COACH OF THE WEEK</span>
+              <span className="btn" onClick={() => this.handleViewAllCoach()}>
+                More
               </span>
             </div>
             <div className="section-body">

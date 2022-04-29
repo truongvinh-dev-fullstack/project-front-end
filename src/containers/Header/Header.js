@@ -48,26 +48,6 @@ class Header extends Component {
             <FormattedMessage id="homeheader.welcome" />,{" "}
             {userInfo && userInfo.firstname ? userInfo.firstname : ""} !
           </span>
-          <span
-            className={
-              language === LANGUAGES.VI ? "language-vi active" : "language-vi"
-            }
-            onClick={() => {
-              this.onChangeLanguae(LANGUAGES.VI);
-            }}
-          >
-            VI
-          </span>
-          <span
-            className={
-              language === LANGUAGES.EN ? "language-en active" : "language-en"
-            }
-            onClick={() => {
-              this.onChangeLanguae(LANGUAGES.EN);
-            }}
-          >
-            EN
-          </span>
           <div className="btn btn-logout" onClick={processLogout}>
             <i className="fas fa-sign-out-alt"></i>
           </div>

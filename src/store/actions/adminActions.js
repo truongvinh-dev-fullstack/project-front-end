@@ -96,11 +96,13 @@ export const createNewUser = (data) => {
   return async (dispatch, getState) => {
     try {
       let res = await createNewUserService(data);
-      toast.success("Create new user successfully!");
+
       if (res && res.errCode === 0) {
+        toast.success("Create new user successfully!");
         dispatch(saveUserSuccess());
         dispatch(fetchAllUserStart());
       } else {
+        toast.error(res.message);
         dispatch(saveUserFailed());
       }
     } catch (error) {

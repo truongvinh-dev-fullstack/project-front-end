@@ -3,7 +3,7 @@
     margin-right: 100px;
     margin-left: 100px;
     height: 500px;
-    border: 1px solid red;
+
 
     .intro-doctor{
         display: flex;
@@ -19,7 +19,7 @@
         }
         .content-right{
             width: 80%;
-            border: 1px solid orange;
+ 
             display: flex;
             flex-direction: column;
             padding-left: 10px;
@@ -33,11 +33,11 @@
     .schedule-doctor{
     margin-top: 20px;
     height: 200px;
-    border: 1px solid ;
+
     }
 
     .detail-info-doctor{
-        border: 1px solid green;
+
         background-color: antiquewhite;
     }
 }

@@ -1,0 +1,48 @@
+.coach-detail-container {
+    margin-top: 60px;
+    margin-right: 100px;
+    margin-left: 100px;
+   
+
+    .Title-coachs {
+        font-size: 20px;
+        font-weight: 600;
+        color: rgb(238, 11, 87);
+        padding-left: 10px;
+    }
+    .coach-item {
+        margin-top: 10px;
+    }
+    .paginate{
+        margin-top: 10px;
+    }
+    .intro-title{
+        margin-top: 30px;
+        text-align: center;
+        font-size: 17px;
+    }
+    .footer {
+        .footer-title{
+           font-family: sf-pro-display-bold;
+           text-transform: uppercase;
+           font-size: 2.5rem;
+        }
+        .footer-content {
+            .child{
+                display: flex;
+                margin-bottom: 10px;
+                .child-title{
+                    width: 7%;
+                    padding: 5px;
+                    text-align: center;
+                    background-color: rgb(143, 204, 204);
+                }
+                .child-content{
+                    width: 93%;
+                    padding: 5px;
+                    background-color: rgb(92, 145, 145);
+                }
+            }
+        }
+    }
+}

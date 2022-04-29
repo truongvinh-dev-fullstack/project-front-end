@@ -69,6 +69,16 @@ class ViewAllCoach extends Component {
       <>
         <HomeHeader isShowPaner={false} />
         <div className="coach-detail-container">
+          <div className="intro-title">
+            <span>
+              Undoubtedly, working out with a personal trainer is the fastest
+              and most effective way to achieve your health and fitness goals.
+              We design programs to suit the most common needs of our members,
+              and we also design personalized workouts to suit each person's
+              fitness and needs
+            </span>
+          </div>
+          <div className="Title-coachs">List Coachs</div>
           {arrCoachs &&
             arrCoachs.length > 0 &&
             arrCoachs.map((item, index) => {
@@ -102,6 +112,44 @@ class ViewAllCoach extends Component {
               breakLinkClassName="page-link"
               activeClassName="active"
             />
+          </div>
+
+          <div className="footer">
+            <div className="footer-title">STEPS TO WORK WITH A COACH</div>
+            <div className="footer-content row">
+              <div className="col-6 child">
+                <div className="child-title">Step One</div>
+                <div className="child-content">
+                  <b>Define physical goals</b> - (note: sometimes the goal you
+                  think about before is not necessarily the most realistic and
+                  accurate goal for you).
+                </div>
+              </div>
+              <div className="col-6 child">
+                <div className="child-title">Step Two</div>
+                <div className="child-content">
+                  <b>Determine current physical capacity</b> - (pay attention:
+                  focus on factors such as existing postural deformities, core
+                  strength, physical injuries...).
+                </div>
+              </div>
+              <div className="col-6 child">
+                <div className="child-title">Step Three</div>
+                <div className="child-content">
+                  <b>Your personal trainer will create a training plan for</b>{" "}
+                  you to best suit your current physical ability and still
+                  achieve your goals, including Frequency, Intensity, and Type
+                  of Exercise. And don't forget to share with your coach what
+                  types of exercises you like.
+                </div>
+              </div>
+              <div className="col-6 child">
+                <div className="child-title">Step Four</div>
+                <div className="child-content">
+                  <b>Strictly</b> follow the plan the coach has given you.
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </>

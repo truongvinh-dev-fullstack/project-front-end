@@ -181,13 +181,14 @@ class ManageSchedule extends Component {
 
   render() {
     let { selectedDoctor, allDoctors, rangeTime } = this.state;
+    // console.log("check state: ", this.state);
     return (
       <React.Fragment>
-        <div className="header-title">Quản lý lịch tập</div>
+        <div className="header-title">Manage Schedule</div>
         <div className="container">
           <div className="row">
             <div className="col-6 ">
-              <label>Chọn Huấn luyện viên</label>
+              <label>Choose coach</label>
               <Select
                 value={selectedDoctor}
                 onChange={this.handleChange}
@@ -195,7 +196,7 @@ class ManageSchedule extends Component {
               />
             </div>
             <div className="col-6 ">
-              <label>Chọn ngày</label>
+              <label>Date</label>
               <DatePicker
                 onChange={this.handleOnChangeDatePicker}
                 className="form-control"
@@ -231,7 +232,7 @@ class ManageSchedule extends Component {
                   this.handleSaveSchedule();
                 }}
               >
-                Lưu thông tin
+                Save info
               </button>
             </div>
           </div>

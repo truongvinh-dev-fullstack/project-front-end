@@ -7,6 +7,7 @@ import _ from "lodash";
 import moment from "moment";
 import * as actions from "../../../store/actions";
 import { saveBookingByUser } from "../../../services/userService";
+import { toast } from "react-toastify";
 
 class ModalBooking extends Component {
   constructor(props) {
@@ -74,6 +75,7 @@ class ModalBooking extends Component {
     let check = this.checkValidateInput();
     if (check) {
       let res = await saveBookingByUser(this.state);
+      toast.success("Appointment successful!");
       console.log("check res:", res);
     }
   };

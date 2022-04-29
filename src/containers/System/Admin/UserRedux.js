@@ -203,22 +203,12 @@ class UserRedux extends Component {
     return (
       <React.Fragment>
         <div className="react-redux-container">
-          <div className="title">User Redux</div>
+          <div className="title title-header">Manage Account</div>
           <div className="react-redux-body">
             <div className="container">
               <div className="row">
-                <div
-                  className="col-12 my-3
-                "
-                >
-                  <span>
-                    <FormattedMessage id="manage-user.add" />
-                  </span>
-                </div>
                 <div className="col-3">
-                  <label>
-                    <FormattedMessage id="manage-user.email" />
-                  </label>
+                  <label>Email</label>
                   <input
                     className="form-control"
                     type="email"
@@ -229,9 +219,7 @@ class UserRedux extends Component {
                   />
                 </div>
                 <div className="col-3">
-                  <label>
-                    <FormattedMessage id="manage-user.password" />
-                  </label>
+                  <label>Password</label>
                   <input
                     className="form-control"
                     type="password"
@@ -242,9 +230,7 @@ class UserRedux extends Component {
                   />
                 </div>
                 <div className="col-3">
-                  <label>
-                    <FormattedMessage id="manage-user.first-name" />
-                  </label>
+                  <label>First Name</label>
                   <input
                     className="form-control"
                     type="text"
@@ -255,9 +241,7 @@ class UserRedux extends Component {
                   />
                 </div>
                 <div className="col-3">
-                  <label>
-                    <FormattedMessage id="manage-user.last-name" />
-                  </label>
+                  <label>Last Name</label>
                   <input
                     className="form-control"
                     type="text"
@@ -268,9 +252,7 @@ class UserRedux extends Component {
                   />
                 </div>
                 <div className="col-3">
-                  <label>
-                    <FormattedMessage id="manage-user.phone-number" />
-                  </label>
+                  <label>Phone Number</label>
                   <input
                     className="form-control"
                     type="number"
@@ -281,9 +263,7 @@ class UserRedux extends Component {
                   />
                 </div>
                 <div className="col-9">
-                  <label>
-                    <FormattedMessage id="manage-user.address" />
-                  </label>
+                  <label>Address</label>
                   <input
                     className="form-control"
                     type="text"
@@ -294,9 +274,7 @@ class UserRedux extends Component {
                   />
                 </div>
                 <div class="col-3">
-                  <label>
-                    <FormattedMessage id="manage-user.gender" />
-                  </label>
+                  <label>Gender</label>
                   <select
                     class="form-control"
                     value={gender}
@@ -317,9 +295,7 @@ class UserRedux extends Component {
                 </div>
 
                 <div class="col-3">
-                  <label>
-                    <FormattedMessage id="manage-user.role" />
-                  </label>
+                  <label>Role</label>
                   <select
                     class="form-control"
                     value={role}
@@ -339,9 +315,7 @@ class UserRedux extends Component {
                   </select>
                 </div>
                 <div className="col-3">
-                  <label>
-                    <FormattedMessage id="manage-user.image" />
-                  </label>
+                  <label>Avatar</label>
 
                   <div className="preview-image-container">
                     <input
@@ -351,7 +325,7 @@ class UserRedux extends Component {
                       onChange={(e) => this.handleOnChangImage(e)}
                     />
                     <label className="lable-img" htmlFor="UpImg">
-                      Tải ảnh <i className="fas fa-upload"></i>
+                      Choose Image <i className="fas fa-upload"></i>
                     </label>
                     <div
                       className="preview-image"
@@ -374,13 +348,9 @@ class UserRedux extends Component {
                       this.handleSaveUser();
                     }}
                   >
-                    <FormattedMessage
-                      id={
-                        this.state.action === CRUD_Actions.EDIT
-                          ? "manage-user.edit"
-                          : "manage-user.save"
-                      }
-                    />
+                    {this.state.action === CRUD_Actions.EDIT
+                      ? "Update"
+                      : "Create New"}
                   </button>
                 </div>
                 <div className="col-12">
@@ -411,7 +381,6 @@ const mapStateToProps = (state) => {
     genderRedux: state.admin.genders,
     isGetGender: state.admin.isLoadingGender,
     roleRedux: state.admin.roles,
-    positionRedux: state.admin.positions,
     listUsers: state.admin.users,
   };
 };

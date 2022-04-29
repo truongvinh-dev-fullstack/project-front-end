@@ -8,11 +8,12 @@
     .more-info{
         display: flex;
         margin-bottom: 10px;
+        gap: 15px;
         .content-left {
             width: 20%;
         }
         .content-center{
-            width: 20%;
+            width: 10%;
         }
         .content-right{
             width: 60%;

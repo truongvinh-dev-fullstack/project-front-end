@@ -39,59 +39,17 @@ class HomeHeader extends Component {
             <div className="center-content">
               <div className="child-content">
                 <div className="sub-title">
-                  <b>
-                    <FormattedMessage id="homeheader.About-us" />
-                  </b>
+                  <b>About Us</b>
                 </div>
-              </div>
-              <div className="child-content">
                 <div
                   className="sub-title"
                   onClick={() => this.handleViewAllCoach()}
                 >
-                  <b>
-                    <FormattedMessage id="homeheader.HLV" />
-                  </b>
+                  <b>Fitness trainer</b>
                 </div>
-              </div>
-              <div className="child-content">
                 <div className="sub-title">
-                  <b>
-                    <FormattedMessage id="homeheader.Blog" />
-                  </b>
+                  <b>Blog</b>
                 </div>
-              </div>
-            </div>
-            <div className="right-content">
-              <div
-                className={
-                  language === LANGUAGES.VI
-                    ? "language-vi active"
-                    : "language-vi"
-                }
-              >
-                <span
-                  onClick={() => {
-                    this.onChangeLanguage(LANGUAGES.VI);
-                  }}
-                >
-                  VI
-                </span>
-              </div>
-              <div
-                className={
-                  language === LANGUAGES.EN
-                    ? "language-en active"
-                    : "language-en"
-                }
-              >
-                <span
-                  onClick={() => {
-                    this.onChangeLanguage(LANGUAGES.EN);
-                  }}
-                >
-                  EN
-                </span>
               </div>
             </div>
           </div>
@@ -100,13 +58,9 @@ class HomeHeader extends Component {
           <div className="home-header-banner">
             <div className="banner-up">
               <div className="title-1">
-                <b>
-                  <FormattedMessage id="homeheader.Fitness-Center" />
-                </b>
+                <b>Fitness-Center</b>
               </div>
-              <div className="title-2">
-                <FormattedMessage id="homeheader.health-care" />
-              </div>
+              <div className="title-2">Having health is having everything</div>
             </div>
           </div>
         )}

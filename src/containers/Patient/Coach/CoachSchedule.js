@@ -3,12 +3,10 @@ import { connect } from "react-redux";
 import { Redirect, Route, Switch } from "react-router-dom";
 import * as actions from "../../../store/actions";
 import HomeHeader from "../../HomePage/HomeHeader";
-import {
-  getDetailDoctor,
-  getScheduleDoctor,
-} from "../../../services/userService";
+import { getScheduleDoctor } from "../../../services/userService";
 import moment from "moment";
 import ModalBooking from "./ModalBooking";
+import "./CoachSchedule.scss";
 
 import "./CoachSchedule.scss";
 class CoachSchdule extends Component {
@@ -127,6 +125,7 @@ class CoachSchdule extends Component {
     return (
       <>
         <div className="Coach-schedule-container">
+          <div className="title-schedule">Book an appointment for free</div>
           <div className="choose-time">
             <select onChange={(e) => this.handleGetSchedule(e)}>
               {allDay &&

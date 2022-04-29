@@ -6,6 +6,7 @@ import {
   getListBookingByDate,
   confirmBooking,
 } from "../../../services/userService";
+import { toast } from "react-toastify";
 
 class DefaultClass extends Component {
   constructor(props) {
@@ -74,6 +75,7 @@ class DefaultClass extends Component {
         email: email,
       });
       if (res && res.errCode == 0) {
+        toast.success("Confirmed success!");
         this.GetAllBookingByDate();
       }
     }

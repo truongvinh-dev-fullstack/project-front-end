@@ -4,14 +4,16 @@ import { Redirect, Route, Switch } from "react-router-dom";
 
 import HomeHeader from "../../HomePage/HomeHeader";
 import "./DetailDoctor.scss";
-import { getDetailDoctor } from "../../../services/userService";
+import { getDetailCoach } from "../../../services/userService";
 import CoachSchdule from "./CoachSchedule";
+import ProfileCoach from "./ProfileCoach";
 
 class DetailDoctor extends Component {
   constructor(props) {
     super(props);
     this.state = {
       detailDoctor: {},
+      coachId: "",
     };
   }
 
@@ -22,7 +24,10 @@ class DetailDoctor extends Component {
       this.props.match.params.id
     ) {
       let id = this.props.match.params.id;
-      let res = await getDetailDoctor(id);
+      this.setState({
+        coachId: id,
+      });
+      let res = await getDetailCoach(id);
       if (res && res.errCode === 0) {
         this.setState({
           detailDoctor: res.data,
@@ -36,12 +41,13 @@ class DetailDoctor extends Component {
 
   render() {
     console.log("check state: ", this.state);
-    let { detailDoctor } = this.state;
+    let { detailDoctor, coachId } = this.state;
     return (
       <>
         <HomeHeader isShowPaner={false} />
         <div className="doctor-detail-container">
-          <div className="intro-doctor">
+          <ProfileCoach coachId={2} />
+          {/* <div className="intro-doctor">
             <div
               className="content-left"
               style={{
@@ -59,7 +65,7 @@ class DetailDoctor extends Component {
                 )}
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="schedule-doctor">
             <CoachSchdule doctorId={detailDoctor.id} />
           </div>
